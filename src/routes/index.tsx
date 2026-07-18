@@ -234,15 +234,29 @@ function Hero() {
         <FadeIn delay={0.5} y={40}>
           <div className="relative flex justify-center mt-2">
             <div className="absolute inset-0 -z-10 blur-3xl opacity-80" style={{ background: "radial-gradient(circle, rgba(255,216,107,0.6) 0%, rgba(212,175,55,0.3) 40%, transparent 70%)" }} />
-            <motion.img
-              src={devicesMockup}
-              alt="Apostila PMMA disponível em notebook, tablet, celular e ebook 3D"
-              width={1536}
-              height={1024}
-              className="w-full max-w-3xl drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)]"
+            <motion.div
+              className="relative"
               animate={{ y: [0, -14, 0], rotate: [-0.5, 0.5, -0.5] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            />
+            >
+              <img
+                src={devicesMockup}
+                alt="Apostila PMMA disponível em notebook, tablet, celular e ebook 3D"
+                width={1536}
+                height={1024}
+                className="w-full max-w-3xl drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)]"
+              />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: -10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="anim-glow-pill absolute top-2 right-2 sm:top-3 sm:right-0 md:right-4 z-10 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs font-black uppercase tracking-wide text-[var(--ink)] border border-[var(--gold-bright)]/60"
+                style={{ background: "linear-gradient(135deg,#d4af37 0%,#ffd86b 50%,#d4af37 100%)" }}
+              >
+                <FileText className="size-3 sm:size-3.5" />
+                Com última atualização do edital
+              </motion.div>
+            </motion.div>
           </div>
         </FadeIn>
 
@@ -253,12 +267,12 @@ function Hero() {
             rel="noopener"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.97 }}
-            className="relative inline-flex items-center justify-center gap-3 rounded-full text-[var(--ink)] font-black px-12 py-6 text-lg md:text-xl uppercase tracking-wide shine-overlay anim-glow-urgency overflow-hidden"
-            style={{ background: "linear-gradient(135deg,#d4af37 0%,#ffd86b 45%,#d4af37 100%)", boxShadow: "0 20px 60px -10px rgba(255,216,107,0.7), 0 0 0 3px rgba(255,216,107,0.25)" }}
+            className="relative inline-flex items-center justify-center gap-2.5 rounded-full text-[var(--ink)] font-black px-9 py-4.5 text-base md:text-lg uppercase tracking-wide shine-overlay anim-glow-urgency overflow-hidden"
+            style={{ background: "linear-gradient(135deg,#d4af37 0%,#ffd86b 45%,#d4af37 100%)", boxShadow: "0 16px 48px -10px rgba(255,216,107,0.7), 0 0 0 3px rgba(255,216,107,0.25)" }}
           >
-            <Flame className="size-6" />
+            <Flame className="size-5" />
             Quero garantir minha apostila
-            <span aria-hidden className="text-2xl">→</span>
+            <span aria-hidden className="text-xl">→</span>
           </motion.a>
         </FadeIn>
 
@@ -508,7 +522,7 @@ function SocialCarousel() {
 }
 
 /* ---------------- Offer ---------------- */
-function useOfferCountdown(totalSeconds = 26 * 60 + 37) {
+function useOfferCountdown(totalSeconds = 16 * 60 + 37) {
   const [left, setLeft] = useState(totalSeconds);
   useEffect(() => {
     const KEY = "pmma_offer_deadline_v1";
