@@ -203,7 +203,7 @@ function Hero() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs md:text-sm font-bold tracking-wider uppercase border-2 border-red-500/60 bg-red-950/30 backdrop-blur-md"
-            style={{ boxShadow: "0 0 40px -8px rgba(239,68,68,0.5)" }}
+            style={{ boxShadow: "0 0 26px -10px rgba(239,68,68,0.32)" }}
           >
             <span className="relative flex size-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-70" />
@@ -233,7 +233,7 @@ function Hero() {
 
         <FadeIn delay={0.5} y={40}>
           <div className="relative flex justify-center mt-2">
-            <div className="absolute inset-0 -z-10 blur-3xl opacity-80" style={{ background: "radial-gradient(circle, rgba(255,216,107,0.6) 0%, rgba(212,175,55,0.3) 40%, transparent 70%)" }} />
+            <div className="absolute inset-0 -z-10 blur-3xl opacity-55" style={{ background: "radial-gradient(circle, rgba(255,216,107,0.4) 0%, rgba(212,175,55,0.2) 40%, transparent 70%)" }} />
             <motion.div
               className="relative"
               animate={{ y: [0, -14, 0], rotate: [-0.5, 0.5, -0.5] }}
@@ -250,10 +250,10 @@ function Hero() {
                 initial={{ opacity: 0, scale: 0.8, y: -10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="anim-glow-pill absolute top-2 right-2 sm:top-3 sm:right-0 md:right-4 z-10 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs font-black uppercase tracking-wide text-[var(--ink)] border border-[var(--gold-bright)]/60"
-                style={{ background: "linear-gradient(135deg,#d4af37 0%,#ffd86b 50%,#d4af37 100%)" }}
+                className="anim-glow-pill absolute top-2 right-2 sm:top-3 sm:right-0 md:right-4 z-10 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs font-black uppercase tracking-wide text-white border border-[var(--gold-bright)]/60 backdrop-blur-md"
+                style={{ background: "linear-gradient(135deg, rgba(10,8,4,0.95) 0%, rgba(20,16,8,0.92) 100%)" }}
               >
-                <FileText className="size-3 sm:size-3.5" />
+                <FileText className="size-3 sm:size-3.5 text-[var(--gold)]" />
                 Com última atualização do edital
               </motion.div>
             </motion.div>
@@ -330,7 +330,7 @@ function Authority() {
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-14 items-center">
         <FadeIn>
           <div className="relative">
-            <div className="absolute -inset-6 -z-10 blur-3xl opacity-60 rounded-[2rem]" style={{ background: "radial-gradient(circle, rgba(212,175,55,0.5) 0%, rgba(255,216,107,0.2) 50%, transparent 70%)" }} />
+            <div className="absolute -inset-6 -z-10 blur-3xl opacity-40 rounded-[2rem]" style={{ background: "radial-gradient(circle, rgba(212,175,55,0.32) 0%, rgba(255,216,107,0.14) 50%, transparent 70%)" }} />
             <div className="relative rounded-3xl overflow-hidden border-2 border-[var(--gold)]/40 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)]">
               <img
                 src={pmmaOfficer}
@@ -377,7 +377,7 @@ function Authority() {
                     <div aria-hidden className="absolute inset-x-5 top-0 h-px opacity-70" style={{ background: "linear-gradient(90deg, transparent, rgba(255,216,107,0.9), transparent)" }} />
                     <div className="relative inline-flex">
                       <div aria-hidden className="absolute inset-0 rounded-2xl blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-500 bg-[var(--gold)]/40" />
-                      <div className="relative inline-flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--gold)]/20 to-[var(--gold)]/5 border border-[var(--gold)]/40 text-[var(--gold-bright)] shadow-[0_8px_24px_-10px_rgba(212,175,55,0.7)] transition-transform duration-500 ease-out group-hover:scale-115 group-hover:-rotate-6">
+                      <div className="relative inline-flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--gold)]/20 to-[var(--gold)]/5 border border-[var(--gold)]/40 text-[var(--gold-bright)] shadow-[0_6px_16px_-10px_rgba(212,175,55,0.45)] transition-transform duration-500 ease-out group-hover:scale-115 group-hover:-rotate-6">
                         <s.icon className="size-5.5" strokeWidth={2.3} />
                       </div>
                     </div>
@@ -723,7 +723,7 @@ function Offer() {
 
       <FadeIn delay={0.2}>
         <div className="mt-14 relative">
-          <div className="absolute -inset-2 rounded-[2rem] gradient-gold opacity-30 blur-2xl" />
+          <div className="absolute -inset-2 rounded-[2rem] gradient-gold opacity-20 blur-2xl" />
           <div className="relative glass-strong rounded-[2rem] overflow-hidden border-2 border-[var(--gold)]/40">
             <div className="grid lg:grid-cols-[1fr_1.1fr]">
               <div className="p-8 md:p-12 bg-gradient-to-br from-[var(--wine-deep)]/40 to-transparent flex flex-col items-center justify-center text-center gap-6 relative">
@@ -756,7 +756,7 @@ function Offer() {
                     <p className="mt-2 text-sm uppercase tracking-[0.3em] text-[var(--gold)]/90 font-bold">por apenas</p>
                     <div className="relative flex items-end gap-2 mt-1">
                       <span className="text-xl md:text-2xl font-black text-[var(--gold)] mb-3 md:mb-4">R$</span>
-                      <span className="font-display font-black leading-none text-7xl md:text-[8.5rem] gradient-gold-text drop-shadow-[0_10px_40px_rgba(212,175,55,0.5)] tabular-nums">
+                      <span className="font-display font-black leading-none text-7xl md:text-[8.5rem] gradient-gold-text drop-shadow-[0_8px_26px_rgba(212,175,55,0.32)] tabular-nums">
                         29
                       </span>
                       <span className="font-display font-black leading-none text-3xl md:text-5xl gradient-gold-text mb-2 md:mb-4 tabular-nums">,99</span>
@@ -904,14 +904,14 @@ function DevicesShowcase() {
 
       <FadeIn delay={0.15} y={50}>
         <div className="relative mt-14 flex justify-center">
-          <div className="absolute inset-0 -z-10 blur-3xl opacity-60" style={{ background: "radial-gradient(ellipse at center, var(--gold) 0%, transparent 60%)" }} />
+          <div className="absolute inset-0 -z-10 blur-3xl opacity-40" style={{ background: "radial-gradient(ellipse at center, var(--gold) 0%, transparent 60%)" }} />
           <motion.img
             src={devicesBook}
             alt="Apostila PMMA — livro físico premium ao lado de notebook e tablet com páginas reais do material"
             width={1536}
             height={1024}
             loading="lazy"
-            className="w-full max-w-5xl drop-shadow-[0_40px_100px_rgba(212,175,55,0.35)]"
+            className="w-full max-w-5xl drop-shadow-[0_30px_70px_rgba(212,175,55,0.22)]"
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -1008,7 +1008,7 @@ function ApostilaPreview() {
 
       <FadeIn delay={0.15} y={40}>
         <div className="mt-14 relative">
-          <div className="absolute -inset-4 -z-10 blur-3xl opacity-40 rounded-[2.5rem]" style={{ background: "radial-gradient(circle at 50% 30%, var(--gold) 0%, transparent 65%)" }} />
+          <div className="absolute -inset-4 -z-10 blur-3xl opacity-28 rounded-[2.5rem]" style={{ background: "radial-gradient(circle at 50% 30%, var(--gold) 0%, transparent 65%)" }} />
 
           {/* Nav buttons */}
           <div className="hidden md:block">
@@ -1471,11 +1471,7 @@ function FloatingUrgencyBar() {
       className="fixed top-[76px] sm:top-[84px] inset-x-0 z-50 px-3 pointer-events-none"
     >
       <div className="pointer-events-auto mx-auto max-w-xl">
-        <motion.div
-          animate={{ scale: [1, 1.025, 1] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="anim-glow-red relative rounded-2xl border-2 border-red-500/70 bg-gradient-to-br from-red-950/60 via-[var(--ink-soft)]/90 to-red-950/30 px-3.5 sm:px-4 py-2.5 sm:py-3 overflow-hidden backdrop-blur-md"
-        >
+        <div className="anim-glow-red relative rounded-2xl border-2 border-red-500/70 bg-gradient-to-br from-red-950/60 via-[var(--ink-soft)]/90 to-red-950/30 px-3.5 sm:px-4 py-2.5 sm:py-3 overflow-hidden backdrop-blur-md">
           <div aria-hidden className="absolute -top-8 -right-8 size-28 rounded-full bg-red-500/40 blur-3xl" />
           <span aria-hidden className="absolute inset-0 pointer-events-none opacity-40" style={{ background: "linear-gradient(115deg, transparent 40%, rgba(248,113,113,0.35) 50%, transparent 60%)", animation: "var(--animate-shine)" }} />
           <div className="flex items-center gap-2.5 sm:gap-3 relative">
@@ -1500,7 +1496,7 @@ function FloatingUrgencyBar() {
               className="h-full bg-gradient-to-r from-red-600 to-red-400"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   );

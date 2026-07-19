@@ -44,7 +44,7 @@
   --font-sans: "Inter", "Manrope", system-ui, sans-serif;
   --font-impact: "Black Ops One", "Inter", system-ui, sans-serif;
 
-  --shadow-glow-gold: 0 0 60px -10px color-mix(in oklab, var(--gold) 55%, transparent);
+  --shadow-glow-gold: 0 0 40px -12px color-mix(in oklab, var(--gold) 38%, transparent);
   --shadow-elevated: 0 30px 80px -20px color-mix(in oklab, black 90%, transparent);
 
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -151,14 +151,14 @@
   }
   .glow-gold {
     box-shadow:
-      0 0 40px -8px color-mix(in oklab, var(--gold) 50%, transparent),
-      0 0 80px -20px color-mix(in oklab, var(--gold) 30%, transparent);
+      0 0 28px -8px color-mix(in oklab, var(--gold) 35%, transparent),
+      0 0 56px -22px color-mix(in oklab, var(--gold) 22%, transparent);
   }
   .glow-wine {
-    box-shadow: 0 0 60px -10px color-mix(in oklab, var(--wine) 60%, transparent);
+    box-shadow: 0 0 42px -12px color-mix(in oklab, var(--wine) 42%, transparent);
   }
   .text-glow-gold {
-    text-shadow: 0 0 30px color-mix(in oklab, var(--gold) 40%, transparent);
+    text-shadow: 0 0 18px color-mix(in oklab, var(--gold) 28%, transparent);
   }
   .border-gold {
     border-color: color-mix(in oklab, var(--gold) 35%, transparent);
@@ -219,8 +219,8 @@
   50% { transform: translateY(-18px) rotate(2deg); }
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 30px -8px color-mix(in oklab, var(--gold) 40%, transparent); }
-  50% { box-shadow: 0 0 60px -4px color-mix(in oklab, var(--gold) 70%, transparent); }
+  0%, 100% { box-shadow: 0 0 20px -10px color-mix(in oklab, var(--gold) 26%, transparent); }
+  50% { box-shadow: 0 0 38px -8px color-mix(in oklab, var(--gold) 46%, transparent); }
 }
 @keyframes marquee {
   from { transform: translateX(0); }
@@ -230,52 +230,52 @@
 /* Infinite glow pulses — rodam nativamente no CSS (compositor) em vez de
    JavaScript (framer-motion), liberando o main thread. Visual idêntico. */
 @keyframes glow-pill {
-  0%, 100% { box-shadow: 0 0 30px -8px rgba(212, 175, 55, 0.35); }
-  50% { box-shadow: 0 0 60px -8px rgba(255, 216, 107, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px -10px rgba(212, 175, 55, 0.25); }
+  50% { box-shadow: 0 0 38px -10px rgba(255, 216, 107, 0.4); }
 }
-.anim-glow-pill { animation: glow-pill 2.4s ease-in-out infinite; }
+.anim-glow-pill { animation: glow-pill 2.8s ease-in-out infinite; }
 
 @keyframes glow-counter {
   0%, 100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--gold) 0%, transparent); }
-  50% { box-shadow: 0 0 50px -8px color-mix(in oklab, var(--gold) 70%, transparent); }
+  50% { box-shadow: 0 0 32px -10px color-mix(in oklab, var(--gold) 45%, transparent); }
 }
-.anim-glow-counter { animation: glow-counter 2.4s ease-in-out infinite; }
+.anim-glow-counter { animation: glow-counter 2.8s ease-in-out infinite; }
 
 @keyframes glow-urgency {
-  0%, 100% { box-shadow: 0 10px 40px -10px rgba(212, 175, 55, 0.35); }
-  50% { box-shadow: 0 14px 60px -10px rgba(255, 216, 107, 0.55); }
+  0%, 100% { box-shadow: 0 8px 26px -12px rgba(212, 175, 55, 0.25); }
+  50% { box-shadow: 0 10px 40px -12px rgba(255, 216, 107, 0.38); }
 }
-.anim-glow-urgency { animation: glow-urgency 2.4s ease-in-out infinite; }
+.anim-glow-urgency { animation: glow-urgency 2.8s ease-in-out infinite; }
 
 @keyframes glow-buy {
-  0%, 100% { box-shadow: 0 12px 32px -8px rgba(212, 175, 55, 0.45); }
-  50% { box-shadow: 0 18px 56px -8px rgba(255, 216, 107, 0.75); }
+  0%, 100% { box-shadow: 0 10px 24px -10px rgba(212, 175, 55, 0.3); }
+  50% { box-shadow: 0 14px 38px -10px rgba(255, 216, 107, 0.5); }
 }
-.anim-glow-buy { animation: glow-buy 2.4s ease-in-out infinite; }
+.anim-glow-buy { animation: glow-buy 2.8s ease-in-out infinite; }
 
 @keyframes glow-stat {
   0%, 100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
-  50% { box-shadow: 0 0 50px -10px var(--card-glow, transparent); }
+  50% { box-shadow: 0 0 34px -12px var(--card-glow, transparent); }
 }
-.anim-glow-stat { animation: glow-stat 3s ease-in-out infinite; }
+.anim-glow-stat { animation: glow-stat 3.4s ease-in-out infinite; }
 
 @keyframes glow-red {
-  0%, 100% { box-shadow: 0 0 26px -10px rgba(239, 68, 68, 0.5); }
-  50% { box-shadow: 0 0 55px -6px rgba(239, 68, 68, 0.9); }
+  0%, 100% { box-shadow: 0 0 12px -10px rgba(239, 68, 68, 0.22); }
+  50% { box-shadow: 0 0 24px -10px rgba(239, 68, 68, 0.4); }
 }
-.anim-glow-red { animation: glow-red 1.5s ease-in-out infinite; }
+.anim-glow-red { animation: glow-red 2.2s ease-in-out infinite; }
 
 @keyframes pulse-red-text {
-  0%, 100% { transform: scale(1); text-shadow: 0 0 18px rgba(239, 68, 68, 0.5); }
-  50% { transform: scale(1.07); text-shadow: 0 0 32px rgba(248, 113, 113, 0.9); }
+  0%, 100% { text-shadow: 0 0 8px rgba(239, 68, 68, 0.22); }
+  50% { text-shadow: 0 0 14px rgba(248, 113, 113, 0.4); }
 }
-.anim-pulse-red-text { animation: pulse-red-text 1s ease-in-out infinite; }
+.anim-pulse-red-text { animation: pulse-red-text 2.2s ease-in-out infinite; }
 
 @keyframes ring-gold {
   0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-  50% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0.15); }
+  50% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0.1); }
 }
-.anim-ring-gold { animation: ring-gold 2s ease-in-out infinite; }
+.anim-ring-gold { animation: ring-gold 2.2s ease-in-out infinite; }
 
 /* Respeita quem prefere menos animação (acessibilidade + performance) */
 @media (prefers-reduced-motion: reduce) {
