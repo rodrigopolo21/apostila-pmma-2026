@@ -21,8 +21,8 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const WHATSAPP = "https://wa.me/5598999999999?text=Quero%20a%20Apostila%20PMMA";
-const CHECKOUT = "https://pay.hotmart.com/";
+const WHATSAPP = "https://wa.me/5598984122272?text=Quero%20a%20Apostila%20PMMA";
+const CHECKOUT = "https://pay.kirvano.com/30b865d2-825b-4685-885e-19bc6b64a121";
 const INSTAGRAM = "https://instagram.com/apostilapmma";
 
 /* ---------------- helpers ---------------- */
